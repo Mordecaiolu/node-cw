@@ -5,21 +5,22 @@ app.use(cors())
 app.listen(3000);
 
 let lessons = [
-    {'topic':'chemistry','location':'Lagos','price':'100'},
-    {'topic':'chemistry','location':'Abuja','price':'80'},
-    {'topic':'chemistry','location':'Port-Harcourt','price':'90'},
-    {'topic':'chemistry','location':'Ondo','price':'150'},
+    {'lesson':'maths','location':'Lagos','price':'100'},
+    {'lesson':'biology','location':'Abuja','price':'80'},
+    {'lesson':'chemistry','location':'Port-Harcourt','price':'90'},
+    {'lesson':'physics','location':'Ondo','price':'150'},
 ];
 
 let user = [
-    {'email': 'user@email.com', 'password':'mypassword'}
+    {'email': 'user@email.com',
+     'password':'mypassword'}
 ]
 
 app.get('/lessons', (request, response) => {
-    response.json(lessons);
+    response.end(JSON.stringify(lessons));
   });
 
   app.get('/user', (request, response) => {
-    response.json(user);
+    response.end(JSON.stringify(user));
   });
   
