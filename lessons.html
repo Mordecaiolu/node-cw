@@ -5,4 +5,18 @@
         <link rel="stylesheet" href="style.css">
 
     </head>
-    
+    <body>
+        <div id='app'>    
+                <div class="go" v-for="lesson in lessons">
+                    <div>
+                        <ul class="list-group">
+                            <li class="list-group-item">Lesson: {{lesson.lesson}}</li>
+                            <li class="list-group-item">Location: {{lesson.location}}</li>
+                            <li class="list-group-item">Price:${{lesson.price}}</li>
+                        </ul>
+                    </div>
+                </div>
+
+        </div>
+
+       
